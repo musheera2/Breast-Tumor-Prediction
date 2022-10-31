@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head >
+<title>Breast Tumour Prediction </title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body style="background-color:lightblue;">
+
+<h1 style="font-family:courier;background-color:black;color:white;text-align:center;font-style:italic;"> MAMMOGRAM TUMOUR DETECTOR</h1><br>
+<section style="align=left">
+<div style="background-color:tomato;">
+
+<form action="/predict" method="post" autocomplete="on">
+
+<label for="bi_rads" style="font-size:30px;text-decoration:underline;background-color:#F0FFF0;border:2px solid #F0FFF0;">BI_RADS_assessment<span style="color:red;">*</span>:</label><br><br>
+<select id="bi_rads" name= "BI_RADS_assessment" placeholder="Select One" required="required" >
+	
+	<option value="Select One" selected> </option> 
+	<option value="Incomplete - (0)">Incomplete - (0)</option>
+	<option value="Negative - (1)">Negative - (1)</option>
+	<option value="Benign Findings - (2)">Benign Findings - (2) </option>
+	<option value="Probably Benign - (3)">Probably Benign - (3)</option>
+	<option value="Suspicious Abnormally- (4)">Suspicious Abnormally- (4) </option>
+	<option value="Highly Suspicious of Malignancy-(5)">Highly Suspicious of Malignancy-(5) </option>
+	<option value="Known Biopsy with proven malignancy - (6)">Known Biopsy with proven malignancy - (6)</option>
+
+</select> <br><br><br>
+
+<label for="age" style="font-size:30px;text-decoration:underline;border:2px solid #F0FFF0;background-color:#F0FFF0;">Age<span style="color:red;">*</span>:</label><br><br>
+<input type="number" id="age" name="Age" min=0 max="100" placeholder="0-100" required="required" /><br><br><br>
+
+<label for="shape" style="font-size:30px;text-decoration:underline;background-color:#F0FFF0;">Shape<span style="color:red;">*</span>:</label><br><br>
+<select id="shape" name= "Shape" placeholder="Select One" required="required" >
+	
+	<option value="Select One" selected> </option> 
+	<option value="Round - (1)">Round - (1)</option>
+	<option value="Oval - (2)">Oval - (2) </option>
+	<option value="Lobular - (3)">Lobular - (3)</option>
+	<option value="Irregular(nominal) - (4)">Irregular(nominal) - (4) </option>
+
+	
+</select> <br><br><br>
+
+<label for="margin" style="font-size:30px;text-decoration:underline;background-color:#F0FFF0;">Margin<span style="color:red;">*</span>:</label><br><br>
+<select id="margin" name= "Margin" placeholder="Select One" required="required" >
+	
+	<option value="Select One" selected> </option> 
+	<option value="Circumscribed - (1)">Circumscribed - (1)</option>
+	<option value="Microlobulated - (2)">Microlobulated - (2) </option>
+	<option value="Obscured - (3)">Obscured - (3)</option>
+	<option value="Ill-Defined - (4)">Ill-Defined - (4) </option>
+	<option value="Spiculated(nominal) - (5)">Spiculated(nominal) - (5) </option>
+
+	
+</select> <br><br><br>
+
+<label for="density" style="font-size:30px;text-decoration:underline;background-color:#F0FFF0;">Density<span style="color:red;">*</span>:</label><br><br>
+<select id="density" name= "Density" placeholder="Select One" required="required" >
+	
+	<option value="Select One" selected> </option> 
+	<option value="High - (1)">High - (1)</option>
+	<option value="Iso - (2)">Iso - (2) </option>
+	<option value="Low - (3)">Low - (3)</option>
+	<option value="Fat-Containing(Ordinal) - (4)">Fat-Containing(Ordinal) - (4) </option>
+	
+
+	
+</select> <br><br><br>
+
+
+
+
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+<br><br>
+
+</form>
+</section>
+
+
+<h2> Please Monitor Patient's Result:<span style="background-color:silver;color:green;border=3px solid black;padding:3px;"> {{Negative}}</span> <span style="background-color:silver;color:red;border=3px solid black;padding:3px;"> {{Positive}}</span></h2><br><br><br><br>
+
+<p style="text-align:center;font-size:25px;">©Shaik Hakeem Sabir Musheera 2022</p><br><br>
+</div>
+</body>
+</html>
